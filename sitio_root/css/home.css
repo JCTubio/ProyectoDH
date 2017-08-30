@@ -1,0 +1,150 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+/*--------------------- CSS Cleaning ----------------------*/
+/*small first*/
+.container{
+	max-width: 480px;
+	margin: 0 auto;
+  background-color: lightblue;
+}
+header{
+	background-color: red;
+	overflow: hidden;
+}
+#logo{
+	float: right;
+	width: 30%;
+}
+.main-nav{
+	width: 70%;
+	margin-bottom: 30px;
+	float: left;
+	text-align: center;
+}
+.main-nav ul{
+overflow: hidden;
+display: inline-block;
+}
+
+.main-nav li{
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: 1px darkgrey solid;
+}
+.main-nav li:last-child{
+	border-right: 0;
+	padding-right: 0;
+}
+li a{
+	text-decoration: none;
+	font-size: 20x;
+}
+.products-gallery{
+	background-color: rgba(255,50,255,0.6);
+	border: solid 3px black;
+	overflow: hidden;
+	padding-bottom: 30px;
+	width: 100%;
+}
+.product{
+	float: left;
+	background-color: rgba(255,0,0,0.6);
+	width: 95%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	text-align: center;
+	margin: 0;
+}
+.product #product-img{
+	width: inherit;
+	display: inline-block;
+}
+@media (min-width: 768px){
+	/*medium size*/
+	.container{
+	  max-width: 768px;
+	}
+	header{
+		position: relative;
+	}
+	.main-nav{
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 35%;
+	}
+
+	.main-nav ul{
+	}
+
+	.main-nav li{
+	}
+
+	.main-nav li:last-child{
+	}
+
+	li a{
+		font-size: 25px;
+	}
+	.products-gallery{
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		background-color: rgba(255,50,255,0.6);
+		border: solid 3px black;
+		overflow: hidden;
+		padding-bottom: 30px;
+	}
+	.product{
+		float: left;
+		background-color: rgba(255,0,0,0.6);
+	}
+	#product-img{
+
+	}
+}

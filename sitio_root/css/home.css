@@ -90,21 +90,6 @@ header{
 	padding-left: 0.5%;
 }
 
-.products-gallery{
-	position: relative;
-	top: 7vh;
-	z-index: 50;
-	overflow-x:scroll;
-	width: calc(3 * 100vw);
-}
-.product{
-	float: left;
-	display: inline;
-}
-#product-img{
-	width: 100vw;
-}
-
 .separador{
 	width: 100vw;
 	height: 50px;

@@ -83,41 +83,51 @@ table {
   width: 120px;
 } /*con las ultimas dos lineas, logre centrar la imagen en su contenrdor*/
 
-.contact-info-container {
+/*.contact-info-container {
 	float: left;
 	overflow: hidden;
 	width: 30%;
 	display: none;
-}
-.contact-info-container p {
+
+}*/
+/*.contact-info-container p {
 	float: left;
 	margin-right: 5%;
-}
-.contact-info-container .envios::before {
+}*/
+/*.shipping-truck {
+  display: inline-block;
+  float: left;
+  font-size: 30px;
+  margin-top: 15px;
+}*/
+/*.contact-info-container .shipping-info::before {
 	content: "\f0D1";
   font-family: "FontAwesome";
 	margin-right: 6px;
+  font-size: 30px;
+  float: left;*/
+
 }
-.contact-info-container .cuotas::before {
+/*.contact-info-container .cuotas::before {
 	content: "\f09d";
   font-family: "FontAwesome";
-	margin-right: 6px;
+	margin-right: 6px;*/
 }
-.personal-details {
+/*.personal-details {
 	float: left;
 	display: none;
-}
-.personal-details .welcome::after {
+}*/
+/*.personal-details .welcome::after {
 	content: "\f2bc";
   font-family: "FontAwesome";
 	margin-left: 6px;
-}
-.cart {
+}*/
+/*.cart {
 	float: left;
 	overflow: hidden;
 	width: 10%;
 	text-align: right;
-}
+}*/
 .cart-total,
 .cart-icon {
 	/*float: left;*/ /*Tiene que flotar en tablet y en desktop*/
@@ -184,4 +194,70 @@ table {
 	.canvas {
 		max-width: 1200px;
 	}
+  .mobile-toggle {
+    display: none;
+  }
+  .header-logo-container {
+    width: 25%;
+  }
+  .contact-info-container {
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+  }
+  p.envios {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 20px;
+    margin-left: 6px;
+  }
+  .card-icon{
+    display: inline-block;
+    float: left;
+    font-size: 29px;
+    margin: 15px 0 0 40px;
+  }
+  .installments p {
+    font-size: 14px;
+    margin: 0px;
+    line-height: 10px;
+    margin-top: 22px;
+    margin-left: 6px;
+  }
+  .user-specific {
+    width: 25%;
+    float: left;
+  }
+  p.welcome {
+    display: inline-block;
+    float: left;
+    margin-top: 22px;
+    font-size: 14px;
+  }
+
+  p.adress-card{
+    font-size: 30px;
+    display: inline-block;
+    float: left;
+    margin-left: 6px;
+    margin-top: 12px;
+
+  }
+  .cart-description{
+    display: inline-block;
+    float: left;
+  }
+  .cart-total{
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 22px;
+    margin-right: 0px;
+  }
+  .cart-icon{
+    display: inline-block;
+    float: left;
+    margin-top: 12px;
+  }
 }

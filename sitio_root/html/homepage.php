@@ -6,24 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../material-de-soporte/custom_bs_home/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
 		<title>Home</title>
   </head>
   <body>
     <div class="container">
-      <header><!-- header a insertar cuando lo haga leo-->
-        <nav id="header_nav" class="main-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </nav>
-        <i id="burger" class="fa fa-bars" style="font-size:40px;"></i>
-        <img id="logo" src="../images/logo.jpg" alt="logo" width=""/>
-        <i id="carro" class="fa fa-shopping-cart" style="font-size: 40px;"></i>
-        <i id="busqueda" class="fa fa-search" style="font-size:40px;"></i>
-      </header>
+      <?php include("header.php"); ?>
 
       <!-- CARRUSEL-->
 

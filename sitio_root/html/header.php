@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,13 +10,13 @@
     <title>Header Proiyecto</title>
   </head>
   <body>
-    <header>
+  --><header>
       <div class="upper-header">
         <div class="mobile-toggle">
           <p> <i class="fa fa-bars" aria-hidden="true"></i> </p>
         </div>
         <div class="logo-container">
-          <a href="index.html"><img src="img/header-logo.png" class="logo" alt="brand-logo"></a>
+          <a href="index.html"><img src="../images/header-logo.png" class="logo" alt="brand-logo"></a>
         </div>
         <div class="benefits-container">
           <div class="benefits-description">
@@ -43,7 +43,7 @@
         </form>
       </div>
     </header>
-    <div class="faq">
+    <!--<div class="faq">
       <h1 class="faq-h1">PREGUNTAS FRECUENTES</h1>
       <div class="qa">
         <h2 class="question">Question 1?</h2>
@@ -65,6 +65,6 @@
         <h2 class="question">Question 5?</h2>
         <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-    </div>
+    </div>-->
   </body>
 </html>

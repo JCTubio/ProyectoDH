@@ -17,22 +17,19 @@
 
 .mobile-toggle {
   float: left;
-  font-size: 30px;
   margin-top: 4vw;
   padding-left: 6vw;
+}
+.fa-bars {
+  font-size: 30px;
 }
 .logo-container {
 
   display: inline-block;
-  margin-top: 4vw;
-  /*si no le ponia esto, no me flotaba a la derecha el carrito*/
-
+  margin-top: 3vw;
 }
 .logo{
-
-  max-width: 50VW;
-
-  /*object-fit: contain;*/
+max-height: 40px;
 }
 /*las 3 íneas de arriba lo encontré en Stackoverflow y sirven para que una imagen se ajuste a su div/contenedor*/
 .benefits-container, .welcome, .adress-card, .cart-total {
@@ -41,7 +38,7 @@
 .customer-specific {
   display: inline-block;
   float: right;
-  font-size: 10vw;
+  font-size: 30px;
   padding-right: 6vw;
   margin-top: 4vw;
 }
@@ -54,7 +51,7 @@
 }
 .search-field {
   margin-right: 0px;
-  height: 50px;
+  height: 30px;
   width: 60vw;
   font-size: 18px;
 }
@@ -63,7 +60,7 @@
   font-size: 18px;
   padding-bottom:0px;
   width: 20vw;
-  height: 50px;
+  height: 30px;
   padding-top: 0vw;
 
 
@@ -94,9 +91,10 @@
 .logo-container {
   float: left;
   width: 25%;
+  margin-top: 20px;
 }
 .logo{
-  width: 100%;
+  max-height: 60px;
 }
 .benefits-container {
   display: inline-block;
@@ -159,10 +157,10 @@ i.fa.fa-credit-card {
   margin-top: 25px;
 }
 .lower-header {
-  padding-top: 30px;
-  margin-bottom: 2vh;
-
+  padding-top: 5px;
+  margin-bottom: 10px;
 }
+
 .faq-h1 {
   padding-top: 30px;
   text-align: center;

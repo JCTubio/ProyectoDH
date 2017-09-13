@@ -13,9 +13,9 @@
   --><header>
       <div class="upper-header">
         <div class="mobile-toggle">
-          <p> <i class="fa fa-bars" aria-hidden="true"></i> </p>
+          <p> <i class="fa fa-bars " aria-hidden="true"></i> </p>
         </div>
-        
+
         <div class="logo-container">
           <a href="homepage.php"><img src="../images/audi.png" class="logo" alt="brand-logo"></a>
         </div>

@@ -31,7 +31,8 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="../images/img-zapatilla1.jpg" alt="Converse 1" style="width:100%;">
+            <img id="solo-chico" src="../images/img-zapatilla1.jpg" alt="Converse 1" style="width:100%;">
+            <img id="solo-grande" src="../images/img-zapa-grande.jpg" alt="Converse 1" style="width:100%;">
             <div class="carousel-caption">
               <h3>Lorem</h3>
               <p>Ipsum lorem ipsum</p>
@@ -39,7 +40,8 @@
           </div>
 
           <div class="item">
-            <img src="../images/img-zapatilla2.jpg" alt="Converse 2" style="width:100%;">
+            <img id="solo-chico" src="../images/img-zapatilla2.jpg" alt="Converse 2" style="width:100%;">
+            <img id="solo-grande" src="../images/img-zapa-grande2.jpg" alt="Converse 1" style="width:100%;">
             <div class="carousel-caption">
               <h3>Ipsum</h3>
               <p>Lorem lorem ipsum</p>
@@ -47,7 +49,8 @@
           </div>
 
           <div class="item">
-            <img src="../images/img-zapatilla3.jpg" alt="Converse 3" style="width:100%;">
+            <img id="solo-chico" src="../images/img-zapatilla3.jpg" alt="Converse 3" style="width:100%;">
+            <img id="solo-grande" src="../images/img-zapa-grande3.jpg" alt="Converse 1" style="width:100%;">
             <div class="carousel-caption">
               <h3>Lorem Ipsum</h3>
               <p>Ipsum lorem ipsum</p>

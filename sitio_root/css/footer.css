@@ -18,11 +18,10 @@ li{
 @media only screen and (min-width: 768px){
 .footer{
   clear: both;
-  background-color: black;
+  background-color: rgba (0,0,0,0);
+  color: black;
   overflow: hidden;
   padding-bottom: 0;
-  /*background-color: red;*/
-  /*border-radius: 30px 30px 0px 0px;*/
 }
 .footer li{
   display: inline-block;
@@ -30,13 +29,21 @@ li{
 .footer ul{
   text-align: center;
   overflow: hidden;
-  padding: 50px;
+  padding: 12px;
 }
 .footer li a{
-  /*background-color: red;*/
   padding: 0 10px;
   font-size: 14px;
-  border-right: 1px solid white;
+  border-right: rgba (0,0,0,0.7);
   text-transform: uppercase;
+}
+.footer a{
+  text-decoration: none;
+  color: black;
+  background-color: rgba(0, 0, 0, 0);
+  /*padding: 10px 0;*/
+  text-transform: uppercase;
+  display: inline-block;
+  width: 100%;
 }
 }

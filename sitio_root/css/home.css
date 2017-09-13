@@ -50,27 +50,16 @@ table {
 /*small first*/
 
 .container{
-	/*max-width: 480px;*/
-	/*margin: 0 auto;*/
 	background-color: #dcdcdc;
-}
-/*header{
-	overflow: hidden;
-	width: 100vw;
-	background-color: #fafafa;
-	position: fixed;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	z-index: 150;*/
-}
-#header_nav{
-	display: none;
+	width: 100%;
 }
 
 i{
 display: inline-block;
 }
-
+.header-pantalla-grande{
+	display: none;
+}
 #logo{
 	position: fixed;
 	left: 50vw;
@@ -118,48 +107,20 @@ display: inline-block;
 	font-weight: bold;
 }
 
-/*
+
 @media (min-width: 768px){
-	medium size
 	.container{
-	  max-width: 768px;
+		max-width: 100%;
 	}
-	header{
-		position: relative;
+	.header-pantalla-grande{
+		display:block;
+		padding: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin: 0 auto;
 	}
-	.main-nav{
-		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 35%;
-	}
-
-	.main-nav ul{
-	}
-
-	.main-nav li{
-	}
-
-	.main-nav li:last-child{
-	}
-
-	li a{
-		font-size: 25px;
-	}
-	.products-gallery{
-		padding-left: 2.5%;
-		padding-right: 2.5%;
-		background-color: rgba(255,50,255,0.6);
-		border: solid 3px black;
-		overflow: hidden;
-		padding-bottom: 30px;
-	}
-	.product{
-		float: left;
-		background-color: rgba(255,0,0,0.6);
-	}
-	#product-img{
+	.carousel slide{
 
 	}
+
 }
-*/

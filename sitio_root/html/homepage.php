@@ -2,19 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../material-de-soporte/custom_bs_home/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
-    <link rel="stylesheet" type="text/css" href="../css/footer.css">
 		<title>Home</title>
   </head>
   <body>
     <div class="container">
       <?php include("header.php"); ?>
-
+      <div class="header-pantalla-grande">
+        <?php include("footer.php"); ?>
+      </div>
       <!-- CARRUSEL-->
 
       <div class="separador"></div>

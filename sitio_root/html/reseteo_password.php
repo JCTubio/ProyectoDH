@@ -27,7 +27,7 @@
                     <button type="submit">Enviar</button>
                 </div>
                 <div class="form-group col-md-8">
-                  <a href="login.html">Volver al Login</a>
+                  <a href="login.php">Volver al Login</a>
                 </div>
             </form>
         </div>  <!--cierra contenido-->

@@ -50,18 +50,18 @@ table {
 /*small first*/
 
 .container{
-	max-width: 480px;
-	margin: 0 auto;
+	/*max-width: 480px;*/
+	/*margin: 0 auto;*/
 	background-color: #dcdcdc;
 }
-header{
+/*header{
 	overflow: hidden;
 	width: 100vw;
 	background-color: #fafafa;
 	position: fixed;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	z-index: 150;
+	z-index: 150;*/
 }
 #header_nav{
 	display: none;

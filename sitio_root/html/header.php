@@ -16,7 +16,7 @@
           <p> <i class="fa fa-bars" aria-hidden="true"></i> </p>
         </div>
         <div class="logo-container">
-          <a href="index.html"><img src="../images/header-logo.png" class="logo" alt="brand-logo"></a>
+          <a href="homepage.php"><img src="../images/audi.png" class="logo" alt="brand-logo"></a>
         </div>
         <div class="benefits-container">
           <div class="benefits-description">

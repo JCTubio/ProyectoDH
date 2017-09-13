@@ -9,24 +9,30 @@
 .upper-header {
   overflow: hidden;
   text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+  /*max-width: 480px;*/
 
 }    /*le Pongo el overflow para que reconozca mobile-toggle que contiene*/
 
 .mobile-toggle {
   float: left;
-  font-size: 40px;
-  margin-top: 30px;
-  padding-left: 5vw;
+  font-size: 30px;
+  margin-top: 4vw;
+  padding-left: 6vw;
 }
 .logo-container {
-  height: 15vh;
-  display: inline-block; /*si no le ponia esto, no me flotaba a la derecha el carrito*/
+
+  display: inline-block;
+  margin-top: 4vw;
+  /*si no le ponia esto, no me flotaba a la derecha el carrito*/
 
 }
 .logo{
 
-  max-height: 150px;
-  object-fit: contain;
+  max-width: 50VW;
+
+  /*object-fit: contain;*/
 }
 /*las 3 íneas de arriba lo encontré en Stackoverflow y sirven para que una imagen se ajuste a su div/contenedor*/
 .benefits-container, .welcome, .adress-card, .cart-total {
@@ -35,25 +41,31 @@
 .customer-specific {
   display: inline-block;
   float: right;
-  font-size: 40px;
-  padding-right: 5vw;
-  margin-top: 30px;
+  font-size: 10vw;
+  padding-right: 6vw;
+  margin-top: 4vw;
 }
 
 .search-container {
   text-align: center;
   font-size: 0px; /*Esta Línea la agrego para juntar el botón con el placeholder*/
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .search-field {
   margin-right: 0px;
-  height: 30px;
-  width: 40%;
+  height: 50px;
+  width: 60vw;
+  font-size: 18px;
 }
 .search-container button {
   margin-left: 0;
   font-size: 18px;
-  padding-bottom: 7px;
-  width: 10%;
+  padding-bottom:0px;
+  width: 20vw;
+  height: 50px;
+  padding-top: 0vw;
+
 
 }
 .faq-h1 {
@@ -148,6 +160,8 @@ i.fa.fa-credit-card {
 }
 .lower-header {
   padding-top: 30px;
+  margin-bottom: 2vh;
+
 }
 .faq-h1 {
   padding-top: 30px;

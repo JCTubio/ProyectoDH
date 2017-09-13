@@ -87,6 +87,9 @@ display: inline-block;
 	text-align: center
 }
 
+#solo-grande{
+	display: none;
+}
 .separador{
 	width: 100vw;
 	background-color: #dcdcdc;
@@ -119,8 +122,12 @@ display: inline-block;
 		padding-bottom: 0;
 		margin: 0 auto;
 	}
-	.carousel slide{
-
+	#solo-chico{
+		display: none;
 	}
-
+	#solo-grande{
+		max-width: 100%;
+		max-height: 500px;
+		display: inline-block;
+	}
 }

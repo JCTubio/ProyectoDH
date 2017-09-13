@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
 		<title>Home</title>
   </head>
   <body>
@@ -69,16 +70,7 @@
         <p>Get the new lorem. Now with double the ipsum!</p>
       </div>
 
-      <footer>
-        <nav id="footer_nav" class="main-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="registro.html">Register</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </nav>
-      </footer>
+      <?php include("footer.php"); ?>
     </div>
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

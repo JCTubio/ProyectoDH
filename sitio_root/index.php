@@ -12,9 +12,9 @@
   </head>
   <body>
     <div class="container">
-      <?php include("php/header.php"); ?>
+      <?php include("header.php"); ?>
       <div class="header-pantalla-grande">
-        <?php include("php/footer.php"); ?>
+        <?php include("footer.php"); ?>
       </div>
       <!-- CARRUSEL-->
 
@@ -74,7 +74,7 @@
         <p>Get the new lorem. Now with double the ipsum!</p>
       </div>
 
-      <?php include("php/footer.php"); ?>
+      <?php include("footer.php"); ?>
     </div>
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

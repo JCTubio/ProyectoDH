@@ -14,7 +14,7 @@
   </head>
   <body>
       <div class="container">
-        <?php include("php/header.php") ?>
+        <?php include("header.php") ?>
 
         <div class="contenido">
               <div class="col-md-8">
@@ -39,7 +39,7 @@
                 </div>
               </form>
           </div>
-        <?php include("php/footer.php"); ?>
+        <?php include("footer.php"); ?>
       </div> <!--cierra container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

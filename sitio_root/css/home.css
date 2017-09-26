@@ -57,9 +57,6 @@ table {
 i{
 display: inline-block;
 }
-.header-pantalla-grande{
-	display: none;
-}
 #logo{
 	position: fixed;
 	left: 50vw;

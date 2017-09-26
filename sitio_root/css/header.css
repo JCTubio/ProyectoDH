@@ -88,6 +88,9 @@ max-height: 40px;
   background-color: black;
   overflow: hidden;
 }
+.login-logout{
+  margin-right: 5px;
+}
 .login-logout > a{
   padding-top: 5px;
   padding-bottom: 5px;
@@ -101,15 +104,6 @@ max-height: 40px;
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  display: inline-block;
-  float: right;
-  color: white;
-  font-weight: bold;
-}
-.login-logout > a:last-child{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-right: 10px
   display: inline-block;
   float: right;
   color: white;

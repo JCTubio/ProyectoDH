@@ -9,7 +9,7 @@
           <?php endif; ?>
           <?php if(1): /*!session_id()*/?>
             <div class="login-logout">
-            <a href="index.php">Register</a> <!--Aca iria php buscando el nombre de usuario*/-->
+            <a href="registro.php">Register</a> <!--Aca iria php buscando el nombre de usuario*/-->
             <p> | </p>
             <a href="login.php">Log in</a>
             </div>

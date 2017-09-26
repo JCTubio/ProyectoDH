@@ -14,7 +14,6 @@
   </head>
   <body>
       <div class="container">
-        <?php include("header.php") ?>
 
         <div class="contenido">
               <div class="col-md-8">

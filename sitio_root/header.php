@@ -1,6 +1,19 @@
 <header>
-      <div class="login header">
-        
+      <div class="login-header">
+        <?php if (0): /*session_id()*/?>
+          <div class="login-logout">
+            <a href="logout.php">Logout</a>
+            <p> | </p>
+            <a href="index.php">Bienvenido usuario</a> <!--Aca iria php buscando el nombre de usuario*/-->
+          </div>
+          <?php endif; ?>
+          <?php if(1): /*!session_id()*/?>
+            <div class="login-logout">
+            <a href="index.php">Register</a> <!--Aca iria php buscando el nombre de usuario*/-->
+            <p> | </p>
+            <a href="login.php">Log in</a>
+            </div>
+          <?php endif; ?>
       </div>
       <div class="upper-header">
         <div class="mobile-toggle">

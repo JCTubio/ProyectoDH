@@ -84,6 +84,38 @@ max-height: 40px;
   margin: 0 3vw;
 }
 
+.login-header{
+  background-color: black;
+  overflow: hidden;
+}
+.login-logout > a{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+  float: right;
+  color: white;
+  font-weight: bold;
+}
+.login-logout > p{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
+  float: right;
+  color: white;
+  font-weight: bold;
+}
+.login-logout > a:last-child{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px
+  display: inline-block;
+  float: right;
+  color: white;
+  font-weight: bold;
+}
+
 @media (min-width: 1200px){
 .mobile-toggle {
   display: none;

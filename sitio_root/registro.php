@@ -22,7 +22,6 @@ $pais = $_SESSION['inputsValues']['pais'] ?? '';*/
   </head>
   <body>
     <div class="container">
-      <?php include("header.php"); ?>
       <?php if (!empty($_SESSION['errores'])): ?>
               <div class="row">
                   <div class="col-md-12">
@@ -65,7 +64,7 @@ $pais = $_SESSION['inputsValues']['pais'] ?? '';*/
             </div>
             <div class="form-group col-md-8">
                     <label for="avatar">Avatar: </label><br/>
-                    <input type="file" class="form-control" name="avatar" id="avatar" value=""required>  
+                    <input type="file" class="form-control" name="avatar" id="avatar" value=""required>
             </div>
             <div class="form-group col-md-8">
                 <button type="submit">Registrarme</button>

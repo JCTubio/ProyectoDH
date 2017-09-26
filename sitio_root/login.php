@@ -27,6 +27,7 @@ $email = $_SESSION['inputsValues']['correo'] ?? '';
   </head>
   <body>
       <div class="container">
+
         <?php include("header.php") ?>
         <?php if (!empty($_SESSION['errores'])): ?>
             <div class="row">
@@ -39,6 +40,7 @@ $email = $_SESSION['inputsValues']['correo'] ?? '';
                 </div>
             </div>
         <?php endif ?>
+
         <div class="contenido">
               <div class="col-md-8">
                 <h1>Inicio de Sesión</h1>

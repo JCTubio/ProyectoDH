@@ -1,3 +1,12 @@
+<?php
+session_start();
+$nombre = $_SESSION['inputsValues']['nombre'] ?? 'Nombre y Apellido';
+$correo = $_SESSION['inputsValues']['correo'] ?? 'email';
+/*$contrasenia = $_SESSION['inputsValues']['contrasenia'] ?? '';
+$controlContrasenia = $_SESSION['inputsValues']['controlContrasenia'] ?? '';
+$pais = $_SESSION['inputsValues']['pais'] ?? '';*/
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,23 +23,34 @@
   <body>
     <div class="container">
       <?php include("header.php"); ?>
-
+      <?php if (!empty($_SESSION['errores'])): ?>
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="alert alert-danger">
+                          <?php foreach ($_SESSION['errores'] as $value): ?>
+                              <p><?php echo $value; ?></p>
+                          <?php endforeach ?>
+                      </div>
+                  </div>
+              </div>
+      <?php endif ?>
       <div class="contenido">
           <div class="col-md-8">
               <h1>Ingresá aquí tus datos para Registrarte</h1>
           </div>
-          <form action="index.html" method="get">
+          <form action="controlDeRegistro.php" enctype="multipart/form-data" method="post">
+
             <div class="form-group col-md-8">
-                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre y Apellido "required>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder=" <?php echo $nombre ?>"required>
             </div>
             <div class="form-group col-md-8">
-                <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo Electrónico"required>
+                <input type="email" class="form-control" name="correo" id="correo" placeholder="<?php echo $correo ?>"required>
             </div>
             <div class="form-group col-md-8">
                 <input type="password" class="form-control" name="contrasenia" id="contrasenia" placeholder="Password"required>
             </div>
             <div class="form-group col-md-8">
-                <input type="password" class="form-control" name="controlcontrasenia" id="controlcontrasenia" placeholder="Confirmar Password"required>
+                <input type="password" class="form-control" name="controlContrasenia" id="controlContrasenia" placeholder="Confirmar Password"required>
             </div>
             <div class="form-group col-md-8">
                 <select class="form-control" name="pais" required>
@@ -42,6 +62,10 @@
                     <option value="chile">Chile</option>
                     <option value="peru">Perú</option>
                 </select>
+            </div>
+            <div class="form-group col-md-8">
+                    <label for="avatar">Avatar: </label><br/>
+                    <input type="file" class="form-control" name="avatar" id="avatar" value=""required>  
             </div>
             <div class="form-group col-md-8">
                 <button type="submit">Registrarme</button>

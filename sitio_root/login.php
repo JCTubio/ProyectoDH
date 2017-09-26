@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+
+$email = $_SESSION['inputsValues']['correo'] ?? '';
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,12 +28,22 @@
   <body>
       <div class="container">
         <?php include("header.php") ?>
-
+        <?php if (!empty($_SESSION['errores'])): ?>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <?php foreach ($_SESSION['errores'] as $value): ?>
+                            <p><?php echo $value; ?></p>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif ?>
         <div class="contenido">
               <div class="col-md-8">
                 <h1>Inicio de Sesión</h1>
               </div>
-              <form action="index.html" method="get">
+              <form action="registro.controller.login.php" method="post">
                 <div class="form-group col-md-8">
                     <input type="email" class="form-control" name="correo" id="correo" placeholder = "Correo Electrónico" required>
                 </div>

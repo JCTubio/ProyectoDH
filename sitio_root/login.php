@@ -45,7 +45,7 @@ $email = $_SESSION['inputsValues']['correo'] ?? '';
               <div class="col-md-8">
                 <h1>Inicio de Sesión</h1>
               </div>
-              <form action="registro.controller.login.php" method="post">
+              <form action="controller.login.php" method="post">
                 <div class="form-group col-md-8">
                     <input type="email" class="form-control" name="correo" id="correo" placeholder = "Correo Electrónico" required>
                 </div>

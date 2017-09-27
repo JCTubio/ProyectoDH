@@ -2,9 +2,7 @@
 session_start();
 $nombre = $_SESSION['inputsValues']['nombre'] ?? 'Nombre y Apellido';
 $correo = $_SESSION['inputsValues']['correo'] ?? 'email';
-/*$contrasenia = $_SESSION['inputsValues']['contrasenia'] ?? '';
-$controlContrasenia = $_SESSION['inputsValues']['controlContrasenia'] ?? '';
-$pais = $_SESSION['inputsValues']['pais'] ?? '';*/
+
  ?>
 
 <!DOCTYPE html>

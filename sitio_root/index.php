@@ -4,7 +4,7 @@ session_start(); ?>
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="../css/footer.css" rel="stylesheet" type="text/css">
+    <link href="css/footer.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../material-de-soporte/custom_bs_home/css/bootstrap.min.css" rel="stylesheet" >
     <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">

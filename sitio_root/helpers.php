@@ -22,3 +22,13 @@ function getUserByEmail ($correo, $pathDB)
 	}
 	return $usuario;
 }
+
+function overrideUser ($array_usuarios, $correo)
+{
+    for ($i = 0; $i < count($array_usuarios); $i++){
+        if($array_usuarios[$i]['correo'] == $correo){
+            unset($array_usuarios[$i]);
+            break;
+        }
+    }
+}

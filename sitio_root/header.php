@@ -4,9 +4,9 @@
           <div class="login-logout">
             <a href="logout.php">Logout</a>
             <p> | </p>
-            <a href="index.php">Bienvenido
+            <a href="perfil.php">Bienvenido
             <?php echo $_SESSION['usuariologueado']['nombre'] ?>
-            </a> <!--Aca iria php buscando el nombre de usuario*/-->
+            </a>
           </div>
           <?php endif; ?>
           <?php if(empty($_SESSION['usuariologueado'])): ?>

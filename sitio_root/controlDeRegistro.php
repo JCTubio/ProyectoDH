@@ -28,10 +28,10 @@ if (empty($contrasenia)) {
 $controlContrasenia = trim($_POST['controlContrasenia']);
 /*if (empty($controlContrasenia)) {
 	$errores['controlContrasenia'] = 'La verificación del password es obligatoria';
-}*/	
+}*/
 
 if ($contrasenia !== $controlContrasenia){
-	$errores['verificarContrasenia'] = 'Los Password ingresados no coinciden';	
+	$errores['verificarContrasenia'] = 'Los Password ingresados no coinciden';
 }
 
 
@@ -57,12 +57,9 @@ $usuario = [
 	'contrasenia' => password_hash($contrasenia, PASSWORD_DEFAULT),
 	'avatar' => $nombreCompleto
 ];
-/* aca tengo que controlar */
-/*var_dump($usuario);
-exit;*/
 
 //Recuperar data
-$usuarios = getUsers('usuarios.json');
+$usuarios = getUsers(DB_PATH);
 
 //Guardar usuario
 $usuarios[] = $usuario;
@@ -80,7 +77,5 @@ function guardarImagen($inputName, $imageName, $path)
 		return $imageName.'.'.$ext;
 	}
 }
-
-header('Location: exito.php');
-
-
+$_SESSION['usuariologueado']=$usuario;
+header('Location: index.php');

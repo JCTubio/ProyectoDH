@@ -3,7 +3,7 @@ session_start();
 
 require 'helpers.php';
 
-define('DB_PATH', 'usuarios.json');
+define('DB_PATH', 'sitio_root/usuarios.json');
 
 $errores = [];
 
@@ -37,4 +37,4 @@ $_SESSION['usuariologueado'] = $user;
 
 
 
-header('Location: loginExitoso.php');
+header('Location: index.php');

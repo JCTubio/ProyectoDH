@@ -1,15 +1,17 @@
 <header>
       <div class="login-header">
-        <?php if (0): /*session_id()*/?>
+        <?php if (!empty($_SESSION['usuariologueado'])): ?>
           <div class="login-logout">
             <a href="logout.php">Logout</a>
             <p> | </p>
-            <a href="index.php">Bienvenido usuario</a> <!--Aca iria php buscando el nombre de usuario*/-->
+            <a href="perfil.php">Bienvenido
+            <?php echo $_SESSION['usuariologueado']['nombre'] ?>
+            </a>
           </div>
           <?php endif; ?>
-          <?php if(1): /*!session_id()*/?>
+          <?php if(empty($_SESSION['usuariologueado'])): ?>
             <div class="login-logout">
-            <a href="registro.php">Register</a> <!--Aca iria php buscando el nombre de usuario*/-->
+            <a href="registro.php">Register</a>
             <p> | </p>
             <a href="login.php">Log in</a>
             </div>

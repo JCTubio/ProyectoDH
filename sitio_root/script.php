@@ -1,5 +1,5 @@
 <?php
-//include ('conn.php');
+include ('conn.php');
 
 function getUsers ($pathDB)
 {
@@ -19,9 +19,13 @@ $usuarios = getUsers ('usuarios.json');
 
 
 foreach ($usuarios as $usuario){
-		$sql="INSERT INTO juandb (nombre, correo, contrasenia, avatar) VALUES ($usuario['nombre'], $usuario['correo'], $usuario['contrasenia'], $usuario['avatar'])";
-		$query=$db->prepare($sql);
-		$query->execute();
+		//$sql = "INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES ($usuario['nombre'], $usuario['correo'], $usuario['contrasenia'], $usuario['avatar'])";
+        $stmt = $db->prepare("INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES (:nombre, :correo, :contrasenia, :avatar)");
+        $stmt->bindParam(':nombre', $usuario['nombre'], PDO::PARAM_STR);
+        $stmt->bindParam(':correo', $usuario['correo'], PDO::PARAM_STR);
+        $stmt->bindParam(':contrasenia', $usuario['contrasenia'], PDO::PARAM_STR);
+        $stmt->bindParam(':avatar', $usuario['avatar'], PDO::PARAM_STR);
+		$stmt->execute();
 }
 
 $db=null;

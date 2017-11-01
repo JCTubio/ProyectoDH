@@ -1,9 +1,11 @@
 <?php
 session_start();
 
+include ('conn.php');
 require 'helpers.php';
 
-define('DB_PATH', 'usuarios.json');
+//OBSOLETO JSON
+//define('DB_PATH', 'usuarios.json');
 
 $errores = [];
 
@@ -35,7 +37,7 @@ if ($contrasenia !== $controlContrasenia){
 }
 
 
-if (getUserByEmail($_POST["correo"], 'usuarios.json')) {
+if (getUserByEmailsql($_POST["correo"])) {
 	$errores['correo'] = 'El email ya existe en la base';
 }
 
@@ -58,13 +60,23 @@ $usuario = [
 	'avatar' => $nombreCompleto
 ];
 
-//Recuperar data
-$usuarios = getUsers(DB_PATH);
+//nueva carga por Mysql
+$stmt = $db->prepare("INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES (:nombre, :correo, :contrasenia, :avatar)");
+$stmt->bindParam(':nombre', $usuario['nombre'], PDO::PARAM_STR);
+$stmt->bindParam(':correo', $usuario['correo'], PDO::PARAM_STR);
+$stmt->bindParam(':contrasenia', $usuario['contrasenia'], PDO::PARAM_STR);
+$stmt->bindParam(':avatar', $usuario['avatar'], PDO::PARAM_STR);
+$stmt->execute();
 
-//Guardar usuario
-$usuarios[] = $usuario;
-$json = json_encode($usuarios);
-file_put_contents(DB_PATH, $json);
+$db=null;
+
+//Recuperar data -OBSOLETO JSON-
+//$usuarios = getUsers(DB_PATH);
+
+//Guardar usuario -OBSOLETO JSON-
+//$usuarios[] = $usuario;
+//$json = json_encode($usuarios);
+//file_put_contents(DB_PATH, $json);
 
 function guardarImagen($inputName, $imageName, $path)
 {

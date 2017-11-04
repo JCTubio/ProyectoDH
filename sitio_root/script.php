@@ -1,6 +1,13 @@
 <?php
 include ('conn.php');
-exit;
+
+//crear tabla de ususarios
+$stmt = $db->prepare("CREATE TABLE usuarios (id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, nombre VARCHAR(200) NOT NULL, correo VARCHAR(200) NOT NULL, contrasenia VARCHAR(200) NOT NULL, avatar VARCHAR(200) NOT NULL)");
+$stmt->execute();
+$stmt=null;
+
+
+
 function getUsers ($pathDB)
 {
 	$usuarios = [];
@@ -19,8 +26,7 @@ $usuarios = getUsers ('usuarios.json');
 
 
 foreach ($usuarios as $usuario){
-		//$sql = "INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES ($usuario['nombre'], $usuario['correo'], $usuario['contrasenia'], $usuario['avatar'])";
-        $stmt = $db->prepare("INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES (:nombre, :correo, :contrasenia, :avatar)");
+		    $stmt = $db->prepare("INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES (:nombre, :correo, :contrasenia, :avatar)");
         $stmt->bindParam(':nombre', $usuario['nombre'], PDO::PARAM_STR);
         $stmt->bindParam(':correo', $usuario['correo'], PDO::PARAM_STR);
         $stmt->bindParam(':contrasenia', $usuario['contrasenia'], PDO::PARAM_STR);

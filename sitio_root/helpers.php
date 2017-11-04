@@ -32,3 +32,12 @@ function overrideUser ($array_usuarios, $correo)
         }
     }
 }
+
+function getUSerByEmailsql ($correo){
+	$stmt = $db->prepare("SELECT * FROM usuarios WHERE correo like :correo");
+	$stmt->bindParam(':correo', $this->correo, PDO::PARAM_STR);
+	$stmt->execute();
+	$resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$db=null;
+	return $resultados;
+}

@@ -1,17 +1,19 @@
 <?php
 session_start();
 
+include ('conn.php');
 require 'helpers.php';
 
-define('DB_PATH', 'sitio_root/usuarios.json');
+
+//OBSOLETO JSON
+//define('DB_PATH', 'usuarios.json');
 
 $errores = [];
 
 //Validación
 
 
-
-$user = getUserByEmail($_POST['correo'], 'usuarios.json');
+$user = getUserByEmailsql($_POST['correo']);
 
 if ($user == false) {
 	$errores['email'] = 'El usuario ingresado no existe';

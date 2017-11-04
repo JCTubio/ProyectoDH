@@ -1,6 +1,6 @@
 <?php
 include ('conn.php');
-
+exit;
 function getUsers ($pathDB)
 {
 	$usuarios = [];

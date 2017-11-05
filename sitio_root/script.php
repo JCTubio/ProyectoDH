@@ -1,5 +1,5 @@
 <?php
-include ('conn.php');
+require_once ('/clases/DBMySQL.php');
 
 //crear tabla de ususarios
 $stmt = $db->prepare("CREATE TABLE usuarios (id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, nombre VARCHAR(200) NOT NULL, correo VARCHAR(200) NOT NULL, contrasenia VARCHAR(200) NOT NULL, avatar VARCHAR(200) NOT NULL)");

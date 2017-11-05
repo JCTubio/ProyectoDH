@@ -5,7 +5,7 @@ $db_user = 'root';
 $db_pass = '';
 
 try{
-    $db= new PDO($dsn, $db_user,$db_pass);
+    $db = new PDO($dsn, $db_user,$db_pass);
     echo "conexion exitosa";
 }
 catch(PDOException $Exception) {

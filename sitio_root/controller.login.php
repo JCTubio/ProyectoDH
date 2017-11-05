@@ -2,7 +2,7 @@
 session_start();
 
 include ('conn.php');
-require 'helpers.php';
+include ('helpers.php');
 
 
 //OBSOLETO JSON
@@ -13,12 +13,13 @@ $errores = [];
 //Validación
 
 
-$user = getUserByEmailsql($_POST['correo']);
-
+$user = getUserByEmailsql($_POST['correo'], $db);
 if ($user == false) {
 	$errores['email'] = 'El usuario ingresado no existe';
 } else {
 	if (password_verify($_POST['contrasenia'], $user['contrasenia']) == false) {
+		/*var_dump($_POST['contrasenia'], $user['contrasenia']);
+		exit;*/
 		$errores[] = 'contraseña incorrecta';
 	}
 }

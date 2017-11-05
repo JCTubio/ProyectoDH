@@ -8,7 +8,7 @@
 
 session_start();
 
-require 'helpers.php';
+include ('helpers.php');
 
 define('DB_PATH', 'usuarios.json');
 
@@ -68,7 +68,7 @@ $usuario = [
 ];
 
 //Recuperar data
-$usuarios = getUsers(DB_PATH);
+/*$usuarios = getUsers(DB_PATH);*/
 
 //Sobreescribir usuario
 overrideUser($usuarios, $_POST['correo']);
@@ -87,5 +87,7 @@ function guardarImagen($inputName, $imageName, $path)
         return $imageName.'.'.$ext;
     }
 }
+
+
 $_SESSION['usuariologueado']=$usuario;
 header('Location: index.php');

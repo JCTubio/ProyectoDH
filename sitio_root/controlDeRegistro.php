@@ -2,7 +2,7 @@
 session_start();
 
 include ('conn.php');
-require 'helpers.php';
+include ('helpers.php');
 
 //OBSOLETO JSON
 //define('DB_PATH', 'usuarios.json');
@@ -37,7 +37,7 @@ if ($contrasenia !== $controlContrasenia){
 }
 
 
-if (getUserByEmailsql($_POST["correo"])) {
+if (getUserByEmailsql($_POST["correo"], $db)) {
 	$errores['correo'] = 'El email ya existe en la base';
 }
 

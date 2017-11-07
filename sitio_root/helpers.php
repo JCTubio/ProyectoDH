@@ -31,7 +31,7 @@ function getUsersSql ()
 
 function getUserByEmail ($correo, $pathDB)
 {
-	$usuarios = getUsers($pathDB);
+	$usuarios = getUsersSql($pathDB);
 	$usuario = false;
 	for($i=0;$i<count($usuarios); $i++){
 		if($usuarios[$i]['correo'] == $correo){

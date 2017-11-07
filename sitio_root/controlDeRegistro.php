@@ -3,6 +3,7 @@ session_start();
 
 include ('conn.php');
 include ('helpers.php');
+include ('clases/usuario.php');
 
 //OBSOLETO JSON
 //define('DB_PATH', 'usuarios.json');
@@ -49,23 +50,25 @@ if ($errores) {
 }
 
 //Crear Imagen
-$imageName = uniqid();
-$nombreCompleto = guardarImagen('avatar', $imageName, 'avatar_usuarios/');
+
+
+
 
 //Crear usuario
-$usuario = [
+$datosUsuario = [
 	'nombre' => $nombre,
 	'correo' => $correo,
 	'contrasenia' => password_hash($contrasenia, PASSWORD_DEFAULT),
-	'avatar' => $nombreCompleto
-];
+	];
+
+$usuario = new Usuario($datosUsuario);
 
 //nueva carga por Mysql
 $stmt = $db->prepare("INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES (:nombre, :correo, :contrasenia, :avatar)");
-$stmt->bindParam(':nombre', $usuario['nombre'], PDO::PARAM_STR);
-$stmt->bindParam(':correo', $usuario['correo'], PDO::PARAM_STR);
-$stmt->bindParam(':contrasenia', $usuario['contrasenia'], PDO::PARAM_STR);
-$stmt->bindParam(':avatar', $usuario['avatar'], PDO::PARAM_STR);
+$stmt->bindParam(':nombre', $usuario->getNombre(), PDO::PARAM_STR);
+$stmt->bindParam(':correo', $usuario->getCorreo(), PDO::PARAM_STR);
+$stmt->bindParam(':contrasenia', $usuario->getContrasenia(), PDO::PARAM_STR);
+$stmt->bindParam(':avatar', $usuario->getAvatar(), PDO::PARAM_STR);
 $stmt->execute();
 
 $db=null;
@@ -78,16 +81,6 @@ $db=null;
 //$json = json_encode($usuarios);
 //file_put_contents(DB_PATH, $json);
 
-function guardarImagen($inputName, $imageName, $path)
-{
-	if ($_FILES[$inputName]['error'] == UPLOAD_ERR_OK) {
-		$ext = pathinfo($_FILES[$inputName]['name'], PATHINFO_EXTENSION);
-		move_uploaded_file(
-			$_FILES[$inputName]['tmp_name'],
-			$path.$imageName.'.'.$ext
-		);
-		return $imageName.'.'.$ext;
-	}
-}
+
 $_SESSION['usuariologueado']=$usuario;
 header('Location: index.php');

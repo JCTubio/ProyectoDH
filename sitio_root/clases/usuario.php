@@ -1,4 +1,12 @@
 <?php
+// comentario de Nico
+// if ($_POST) {
+//   $errores = Validador::validarInformacion($_POST, $db);
+//
+//   if (!count($errores) > 0) {
+//
+//   }
+// }
 
 class Usuario {
   private $id;
@@ -21,6 +29,7 @@ class Usuario {
     $this->username = $datos["username"];
     $this->pais = $datos["pais"];
     //$this->telefono = $datos["telefono"];
+
   }
 
   public function guardarImagen() {

@@ -1,27 +1,24 @@
 <?php
-// comentario de Nico
-// if ($_POST) {
-//   $errores = Validador::validarInformacion($_POST, $db);
-//
-//   if (!count($errores) > 0) {
-//
-//   }
-// }
 
 class Usuario {
-  private $nombre;
-  private $correo;
-  private $contrasenia;
-  private $avatar;
+  private $id;
+  private $email;
+  private $password;
+  private $pais;
 
 
-  public function __construct($datos)
-  {
-    $this->nombre = $datos['nombre'];
-    $this->correo = $datos['correo'];
-    $this->contrasenia = $datos['contrasenia'];
-    $this->guardarImagen();
+  public function __construct($datos) {
+    if (isset($datos["id"])) {
+      $this->id = $datos["id"];
+      $this->password = $datos["password"];
+    }
+    else {
+      $this->password = password_hash($datos["password"], PASSWORD_DEFAULT);
+    }
 
+    $this->email = $datos["email"];
+    $this->pais = $datos["pais"];
+    //$this->telefono = $datos["telefono"];
   }
 
   public function guardarImagen() {
@@ -67,21 +64,7 @@ class Usuario {
     return $this->pais;
   }
 
-  public function setEdad($edad) {
-    $this->edad = $edad;
-  }
 
-  public function getEdad() {
-    return $this->edad;
-  }
-
-  public function setUsername($username) {
-    $this->username = $username;
-  }
-
-  public function getUsername() {
-    return $this->username;
-  }
 
 
 }

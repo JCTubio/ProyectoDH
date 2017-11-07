@@ -7,10 +7,9 @@ class DBMySQL extends DB {
   private $db;
 
   public function __construct() {
-    $dsn = 'mysql:host=localhost;dbname=reglog;
-    charset=utf8mb4;port=3306';
-    $user ="root";
-    $pass = "root";
+    $dsn = 'mysql:host=localhost;dbname=web_db;charset=utf8mb4;port:3306';
+    $db = 'root';
+    $db = '';
 
     try {
       $this->db = new PDO($dsn, $user, $pass);
@@ -19,7 +18,9 @@ class DBMySQL extends DB {
     }
 
   }
-
+  public function getConnection(){
+        return $this->db;
+    }
   public function guardarUsuario(Usuario $usuario) {
 
 		$query = $this->db->prepare("Insert into usuarios values(default, :email, :password,:edad,:username,:pais)");

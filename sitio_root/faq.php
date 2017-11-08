@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="../material-de-soporte/custom_bs_home/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
-    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
 		<title>Home</title>
   </head>
   <body>
     <?php  include ('header.php');?>
-    <?php  include ('footer.php');?>
     <div class="faq">
       <h1 class="faq-h1">PREGUNTAS FRECUENTES</h1>
       <div class="qa">

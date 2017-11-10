@@ -12,54 +12,54 @@ class Usuario {
     $this->nombre = $datos['nombre'];
     $this->correo = $datos['correo'];
     $this->contrasenia = $datos['contrasenia'];
-    $this->guardarImagen();
+    //$this->guardarImagen();
 
   }
 
-  public function guardarImagen() {
+  /*public function guardarImagen() {
 		$nombre=$_FILES["avatar"]["name"];
 		$archivo=$_FILES["avatar"]["tmp_name"];
 
 		$ext = pathinfo($nombre, PATHINFO_EXTENSION);
 
-		$miArchivo = "img/" . $this->getEmail() . "." . $ext;
+		$miArchivo = "img/" . $this->getCorreo() . "." . $ext;
 
 		move_uploaded_file($archivo, $miArchivo);
+  }*/
+
+  public function setNombre($nombre) {
+    $this->nombre = $nombre;
   }
 
-  public function setId($id) {
-    $this->id = $id;
+  public function getNombre() {
+    return $this->nombre;
   }
 
-  public function getId() {
-    return $this->id;
+  public function setCorreo($correo) {
+    $this->correo = $correo;
   }
 
-  public function setEmail($email) {
-    $this->email = $email;
+  public function getCorreo() {
+    return $this->correo;
   }
 
-  public function getEmail() {
-    return $this->email;
+  public function setContrasenia($contrasenia) {
+    $this->contrasenia = $contrasenia;
   }
 
-  public function setPassword($password) {
-    $this->password = $password;
+  public function getContrasenia() {
+    return $this->contrasenia;
   }
 
-  public function getPassword() {
-    return $this->password;
+  public function setAvatar($avatar) {
+    $this->avatar = $avatar;
   }
 
-  public function setPais($pais) {
-    $this->pais = $pais;
+  public function getAvatar() {
+    return $this->avatar;
   }
 
-  public function getPais() {
-    return $this->pais;
-  }
-
-  public function setEdad($edad) {
+  /*public function setEdad($edad) {
     $this->edad = $edad;
   }
 
@@ -73,7 +73,7 @@ class Usuario {
 
   public function getUsername() {
     return $this->username;
-  }
+  }*/
 
 
 }

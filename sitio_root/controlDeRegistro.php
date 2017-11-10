@@ -1,14 +1,55 @@
 <?php
 session_start();
 
-include ('conn.php');
+include_once("soporte.php");
+require_once("clases/usuario.php");
 include ('helpers.php');
-include ('clases/usuario.php');
+
+/*if ($auth->estaLogueado()) {
+	header("Location:index.php");exit;
+}*/
+
+
+
+
+
+$errores = [];
+if ($_POST) {
+	$errores = $validador->validarInformacion($_POST, $db);
+
+	if (!isset($errores["nombre"])) {
+		$nombreDefault = $_POST["nombre"];
+	}
+
+	if (!isset($errores["correo"])) {
+		$correoDefault = $_POST["correo"];
+	}
+
+	/*if (!isset($errores["username"])) {
+		$usernameDefault = $_POST["username"];
+	}
+
+	if (!isset($error["telefono"])) {
+		$telefonoDefault = $_POST["telefono"];
+	}*/
+
+	if (count($errores) == 0) {
+		$usuario = new Usuario($_POST);
+		$correo = $_POST["correo"];
+
+		//$usuario->guardarImagen($correo);
+		$db->guardarUsuario($usuario);
+
+		header('Location: index.php');
+		//header("Location:perfilUsuario.php?mail=$mail");exit;
+	}
+}
+
 
 //OBSOLETO JSON
 //define('DB_PATH', 'usuarios.json');
 
-$errores = [];
+/*$errores = [];
 
 //Validación de los datos ingresados por el usuario
 $nombre = trim($_POST['nombre']);
@@ -32,7 +73,7 @@ $controlContrasenia = trim($_POST['controlContrasenia']);
 /*if (empty($controlContrasenia)) {
 	$errores['controlContrasenia'] = 'La verificación del password es obligatoria';
 }*/
-
+/*
 if ($contrasenia !== $controlContrasenia){
 	$errores['verificarContrasenia'] = 'Los Password ingresados no coinciden';
 }
@@ -80,6 +121,9 @@ $db=null;
 //$usuarios[] = $usuario;
 //$json = json_encode($usuarios);
 //file_put_contents(DB_PATH, $json);
+
+*/
+
 
 
 $_SESSION['usuariologueado']=$usuario;

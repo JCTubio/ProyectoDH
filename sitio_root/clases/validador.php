@@ -6,44 +6,52 @@ class Validador {
   public function validarInformacion($informacion, DB $db) {
     $errores = [];
 
-		foreach ($informacion as $clave => $valor) {
-			$informacion[$clave] = trim($valor);
-		}
 
 
-		if (strlen($informacion["username"]) <= 3) {
-			$errores["username"] = "Tenes que poner más de 3 caracteres en tu nombre de usuario";
-		}
+    $nombre = trim($informacion['nombre']);
+    if (empty($nombre)) {
+    	$errores['nombre'] = 'El nombre es obligatorio';
+    }
 
-		if ($informacion["edad"] < 18) {
-			$errores["edad"] = "Tenes que tener más de 18 años";
-		}
+    $correo = trim($informacion['correo']);
+    if (empty($correo)) {
+    	$errores['correo'] = 'El email es obligatorio';
+    } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+    	$errores['correo'] = 'El email ingresado no es válido';
+    }
 
-		if (is_numeric($informacion["telefono"]) == false) {
-			$errores["telefono"] = "El telefono debe ser un numero";
-		}
+    $contrasenia = $informacion['contrasenia'];
+    if (empty($contrasenia)) {
+    	$errores['contrasenia'] = 'El password es obligatorio';
+    }
+
+    $controlContrasenia = $informacion['contrasenia'];
+    if (empty($controlContrasenia)) {
+    	$errores['controlContrasenia'] = 'La verificación del password es obligatoria';
+    }
+
+    if ($contrasenia !== $controlContrasenia){
+    	$errores['verificarContrasenia'] = 'Los Password ingresados no coinciden';
+    }
+
+    
+    if ($db->traerPorMail($informacion['correo'])) {
+    	$errores['correo'] = 'El email ya existe en la base';
+    }
+
+    if ($errores) {
+    	$_SESSION['errores'] = $errores;
+    	$_SESSION['inputsValues'] = $_POST;
+    	header('Location: registro.php');
+    	exit;
+    }
 
 
-		if ($informacion["email"] == "") {
-			$errores["email"] = "Che, dejaste el mail incompleto";
-		}
-		else if (filter_var($informacion["email"], FILTER_VALIDATE_EMAIL) == false) {
-			$errores["mail"] = "El mail tiene que ser un mail";
-		} else if ($db->traerPorMail($informacion["email"]) != NULL) {
-			$errores["mail"] = "El usuario ya existia!";
-		}
 
-		if ($informacion["password"] == "") {
-			$errores["password"] = "No llenaste la contraseña";
-		}
 
-		if ($informacion["cpassword"] == "") {
-			$errores["cpassword"] = "No llenaste completar contraseña";
-		}
 
-		if ($informacion["password"] != "" && $informacion["cpassword"] != "" && $informacion["password"] != $informacion["cpassword"]) {
-			$errores["password"] = "Las contraseñas no coinciden";
-		}
+
+
 
     if ($_FILES["avatar"]["error"] != UPLOAD_ERR_OK)
 		{

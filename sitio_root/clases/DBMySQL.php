@@ -8,8 +8,8 @@ class DBMySQL extends DB {
 
   public function __construct() {
     $dsn = 'mysql:host=localhost;dbname=web_db;charset=utf8mb4;port:3306';
-    $db = 'root';
-    $db = '';
+    $user = 'root';
+    $pass = '';
 
     try {
       $this->db = new PDO($dsn, $user, $pass);
@@ -23,7 +23,20 @@ class DBMySQL extends DB {
     }
   public function guardarUsuario(Usuario $usuario) {
 
-		$query = $this->db->prepare("Insert into usuarios values(default, :email, :password,:edad,:username,:pais)");
+    $stmt = $this->db->prepare("INSERT INTO usuarios (nombre, correo, contrasenia, avatar) VALUES (:nombre, :correo, :contrasenia, :avatar)");
+    var_dump($usuario->getAvatar());
+    exit;
+    $stmt->bindParam(':nombre', $usuario->getNombre(), PDO::PARAM_STR);
+    $stmt->bindParam(':correo', $usuario->getCorreo(), PDO::PARAM_STR);
+    $stmt->bindParam(':contrasenia', $usuario->getContrasenia(), PDO::PARAM_STR);
+    $stmt->bindParam(':avatar', $usuario->getAvatar(), PDO::PARAM_STR);
+    $stmt->execute();
+
+
+
+
+
+    /*$query = $this->db->prepare("insert into usuarios values(default, :email, :password,:edad,:username,:pais)");
 
 		$query->bindValue(":email", $usuario->getEmail());
 		$query->bindValue(":password", $usuario->getPassword());
@@ -34,7 +47,7 @@ class DBMySQL extends DB {
 		$id = $this->db->lastInsertId();
 		$usuario->setId($id);
 
-		$query->execute();
+		$query->execute();*/
 
 		return $usuario;
   }
@@ -53,7 +66,7 @@ class DBMySQL extends DB {
     return $arrayFinal;
   }
   public function traerPorMail($email) {
-		$query = $this->db->prepare("Select * from usuarios where email = :email");
+		$query = $this->db->prepare("Select * from usuarios where correo = :email");
 		$query->bindValue(":email", $email);
 
 		$query->execute();

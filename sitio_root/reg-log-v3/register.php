@@ -7,37 +7,43 @@
 		header("Location:inicio.php");exit;
 	}
 
-	$emailDefault = "";
-	$edadDefault = "";
-	$usernameDefault = "";
-	$telefonoDefault = "";
 
-	$paises = [
+	$nombreDefault="";
+	$correoDefault = "";
+	//$contraseniaDefault = "";
+	//$controlContraseniaDefault = "";
+	$paisDefault = "";
+	$avatarDefault = "";
+	//$edadDefault = "";
+	//$usernameDefault = "";
+	//$telefonoDefault = "";
+
+	/*$paises = [
 		"Ar" => "Argentina",
 		"Br" => "Brasil",
 		"Co" => "Colombia",
 		"Fr" => "Francia"
-	];
+	];*/
 
 	$errores = [];
 	if ($_POST) {
 		$errores = $validador->validarInformacion($_POST, $db);
 
-		if (!isset($errores["email"])) {
-			$emailDefault = $_POST["email"];
+		if (!isset($errores["nombre"])) {
+			$emailDefault = $_POST["nombre"];
 		}
 
-		if (!isset($errores["edad"])) {
-			$edadDefault = $_POST["edad"];
+		if (!isset($errores["correo"])) {
+			$edadDefault = $_POST["correo"];
 		}
 
-		if (!isset($errores["username"])) {
+		/*if (!isset($errores["username"])) {
 			$usernameDefault = $_POST["username"];
 		}
 
 		if (!isset($error["telefono"])) {
 			$telefonoDefault = $_POST["telefono"];
-		}
+		}*/
 
 		if (count($errores) == 0) {
 			$usuario = new Usuario($_POST);

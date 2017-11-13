@@ -1,4 +1,12 @@
 <?php
+// comentario de Nico
+// if ($_POST) {
+//   $errores = Validador::validarInformacion($_POST, $db);
+//
+//   if (!count($errores) > 0) {
+//
+//   }
+// }
 
 class Usuario {
   private $nombre;

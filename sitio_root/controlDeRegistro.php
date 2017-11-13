@@ -54,8 +54,7 @@ if ($_POST) {
 //Validación de los datos ingresados por el usuario
 $nombre = trim($_POST['nombre']);
 if (empty($nombre)) {
-	$errores['nombre'] = 'El nombre es obligatorio';
-}
+	$errores['nombre'] = 'El nombre es obligatora';
 
 $correo = trim($_POST['correo']);
 if (empty($correo)) {

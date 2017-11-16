@@ -13,12 +13,12 @@ class CreateTableProductos extends Migration
      */
     public function up()
     {
-        Shema::create('productos', function(Blueprint $table){
+        Schema::create('productos', function(Blueprint $table){
           $table->increments('id');
           $table->string('nombre');
           $table->string('marca');
-          $table->int('precio');
-          $table->tinyInteger('id_categoria')->unsigned()->index();
+          $table->integer('precio');
+          $table->unsignedInteger('id_categoria')->index();
           $table->timestamps();
         });
       }

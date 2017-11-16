@@ -14,10 +14,10 @@ class CreateTableCategorias extends Migration
     public function up()
     {
         //crear tabla
-        Shema::create('categorias', function(Blueprint $table){
+        Schema::create('categorias', function(Blueprint $table){
           $table->increments('id');
           $table->string('nombre');
-          $table->int('cat_padre')->unsigned()->index()->nullable();
+          $table->unsignedInteger('cat_padre')->index()->nullable();
           $table->timestamps();
         });
     }

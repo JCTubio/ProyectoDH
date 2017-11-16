@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableItemCarro extends Migration
+class CreateTableCarros extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTableItemCarro extends Migration
      */
     public function up()
     {
-        Schema::create('items_carro', function (Blueprint $table) {
+        Schema::create('carros', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('id_producto')->unique()->index();
-            $table->unsignedInteger('id_carro')->unique()->index();
-            $table->integer('cantidad');
+            $table->unsignedInteger('dueno')->index();
+            $table->unsignedInteger('item_carro')->index();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateTableItemCarro extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_carro');
+        Schema::dropIfExists('carros');
     }
 }

@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('clave');
             $table->string('avatar');
-            $table->int('id_carro');
+            $table->unsignedInteger('id_carro')->unique();
             $table->rememberToken();
             $table->timestamps();
         });

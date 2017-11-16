@@ -16,7 +16,7 @@ class CreateTableCarros extends Migration
         Schema::create('carros', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('dueno')->index();
-            $table->unsignedInteger('item_carro')->index();
+            $table->unsignedInteger('item_carro')->nullable()->index();
             $table->timestamps();
         });
     }

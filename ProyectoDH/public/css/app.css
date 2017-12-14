@@ -7,6 +7,30 @@
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+.detalles-prod{
+  position: relative;
+  margin: auto;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  overflow: auto;
+}
+.detalles-prod img{
+  float: right;
+  max-width: 30%;
+  max-height: 80%;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.detalles-prod form button{
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

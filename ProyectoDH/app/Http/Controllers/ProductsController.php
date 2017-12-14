@@ -8,12 +8,14 @@ class ProductsController extends Controller
 {
     public function index() {
         $products = \App\Product::all();
+        $categories = \App\Category::all();
 
         $variables = [
             "products" => $products,
+            "categories" => $categories
         ];
 
-        return view('products.index', $variables);
+        return view('products.expo', $variables);
     }
 
     public function show($id) {
@@ -57,9 +59,13 @@ class ProductsController extends Controller
 
         $request->validate($rules, $messages);
 
-        $extensionImagen = $request->file('fotoPath')->getClientOriginalExtension();
-        $fotoPath = $request->file('fotoPath')->storeAs('productos', uniqid() . "." . $extensionImagen, 'public');
-
+        if(($request->file('fotoPath')) !== null){
+          $extensionImagen = $request->file('fotoPath')->getClientOriginalExtension();
+          $fotoPath = $request->file('fotoPath')->storeAs('productos', uniqid() . "." . $extensionImagen, 'public');
+        }
+        else{
+          $fotoPath = null;
+        }
         $product = \App\Product::create([
             'name' => $request->input('name'),
             'cost' => $request->input('cost'),

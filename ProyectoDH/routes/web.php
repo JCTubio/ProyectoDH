@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index');
 
 Route::get('/productos', 'ProductsController@index');
-Route::get('/productos/agregar', 'ProductsController@create');
+Route::get('/productos/agregar', 'ProductsController@create')->name('agregarP');
 Route::post('/productos/agregar', 'ProductsController@store');
 Route::get('/productos/{id}/edit', 'ProductsController@edit')->middleware('checkname:admin');
 Route::delete('/productos/{id}', 'ProductsController@destroy');

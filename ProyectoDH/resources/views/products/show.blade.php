@@ -69,7 +69,7 @@
 
 <!--Mostrar Producto-->
   <div class="detalles-prod">
-    <img src="{{ asset('storage/productos/' . $product->fotopath) }}" alt="">
+    <img src="{{ asset('storage/' . $product->fotopath) }}" alt="">
     @if($product->fotopath == null)
       <img src="/img/miss-img.jpg" alt="">
     @endif

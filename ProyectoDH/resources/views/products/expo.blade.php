@@ -50,7 +50,7 @@
       <a href="/productos/{{$product->id}}" class="product-card">
         <div class="product-image">
           @if (@isset($product->fotopath))
-            <img src="{{ asset('storage/productos/' . $product->fotopath) }}" alt="">
+            <img src="{{ asset('storage/' . $product->fotopath) }}" alt="">
           @else
           <img src="\img\miss-img.jpg" alt="">
         @endif

@@ -67,10 +67,10 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Welcome To The Next Generation Of Online Shopping!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-          <div class="intro-mini-text"> ( log in to get started )</div>
+          <div class="intro-lead-in">Publicá tus productos y servicios y Vendelos en nuestra comunidad de usuarios!</div>
+          <div class="intro-heading text-uppercase">Todas las Categorías</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Conocé Más</a>
+          <div class="intro-mini-text"> ( login para empezar )</div>
         </div>
       </div>
     </header>
@@ -80,8 +80,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Servicios</h2>
+            <h3 class="section-subheading text-muted">Encontrá los mejores productos y servicios en nuestra comunidad de usuarios.</h3>
           </div>
         </div>
         <div class="row text-center">
@@ -91,7 +91,7 @@
               <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">Comprá y Vendé al instante.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
@@ -99,7 +99,7 @@
               <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">El mejor diseño para que luzcas con tus productos y servicios.</p>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
@@ -107,7 +107,7 @@
               <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">Transacciones 100% Seguras.</p>
           </div>
         </div>
       </div>
@@ -118,8 +118,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Categorías</h2>
+            <h3 class="section-subheading text-muted">Encontrá los productos y servicios para vos, navegando en las Categorías.</h3>
           </div>
         </div>
         <div class="row">
@@ -133,8 +133,8 @@
               <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
+              <h4>Indumentaria</h4>
+              <p class="text-muted">Moda y Diseño</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -147,8 +147,8 @@
               <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
+              <h4>Viajes</h4>
+              <p class="text-muted">Alojamiento y Experiencias Únicas</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -161,8 +161,8 @@
               <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
+              <h4>Calzado</h4>
+              <p class="text-muted">Diseños de Autor</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -175,8 +175,8 @@
               <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
+              <h4>Fotografía</h4>
+              <p class="text-muted">Imágenes Digitales</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -189,8 +189,8 @@
               <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Diseño Web</h4>
+              <p class="text-muted">Múltiples Plataformas</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
@@ -203,8 +203,8 @@
               <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Social Media</h4>
+              <p class="text-muted">Community Management</p>
             </div>
           </div>
         </div>
@@ -212,12 +212,12 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <!--<section id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Cómo llegamos hasta Aquí</h2>
+            <h3 class="section-subheading text-muted">Un largo camino.</h3>
           </div>
         </div>
         <div class="row">
@@ -229,11 +229,11 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>2009-2011</h4>
-                    <h4 class="subheading">Our Humble Beginnings</h4>
+                    <h4>Agosto</h4>
+                    <h4 class="subheading">Empieza el Curso</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted">Sólo sabemos algo de Mumuki, pero empezamos con mucho entusiasmo</p>
                   </div>
                 </div>
               </li>
@@ -243,11 +243,11 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>March 2011</h4>
-                    <h4 class="subheading">An Agency is Born</h4>
+                    <h4>Agosto</h4>
+                    <h4 class="subheading">Terminamos el módulo HTML, CSS</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    <p class="text-muted">Entregamos el sprint1 con Bootstrap</p>
                   </div>
                 </div>
               </li>
@@ -257,7 +257,7 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4>December 2012</h4>
+                    <h4>Empezamos PHP</h4>
                     <h4 class="subheading">Transition to Full Service</h4>
                   </div>
                   <div class="timeline-body">
@@ -290,23 +290,23 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- Team -->
     <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Nuestro Increíble Equipo</h2>
+            <h3 class="section-subheading text-muted">Un gran equipo interdiciplinario .</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
+              <img class="mx-auto rounded-circle" src="img/team/juan.png" alt="">
+              <h4>Juan Cruz Tubio</h4>
+              <p class="text-muted">Director del equipo, el que realmente sabe</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -328,9 +328,9 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-              <h4>Larry Parker</h4>
-              <p class="text-muted">Lead Marketer</p>
+              <img class="mx-auto rounded-circle" src="img/team/gabriel.jpg" alt="">
+              <h4>Gabriel Szwarcberg</h4>
+              <p class="text-muted">Director de Marketing</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -352,9 +352,9 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-              <h4>Diana Pertersen</h4>
-              <p class="text-muted">Lead Developer</p>
+              <img class="mx-auto rounded-circle" src="img/team/leo.jpg" alt="">
+              <h4>Leandro Harari</h4>
+              <p class="text-muted">Director Comercial</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                   <a href="#">
@@ -377,13 +377,13 @@
         </div>
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted">Estamos para asesorarte en cualquier momento, contactanos!</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clients -->
+    <!-- Clients
     <section class="py-5">
       <div class="container">
         <div class="row">
@@ -409,15 +409,15 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- Contact -->
     <section id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Contacto</h2>
+            <h3 class="section-subheading text-muted">Completá tus datos y nos comunicaremos a la brevedad.</h3>
           </div>
         </div>
         <div class="row">
@@ -447,7 +447,7 @@
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar Mensaje</button>
                 </div>
               </div>
             </form>
@@ -461,7 +461,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; DigitalMarket by DigitalHouse 2017</span>
+            <span class="copyright">Copyright &copy; DigitalHouse 2017</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">

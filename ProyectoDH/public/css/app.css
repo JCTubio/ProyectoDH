@@ -16,6 +16,8 @@
   padding-left: 10px;
   padding-bottom: 10px;
   overflow: auto;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
 }
 .detalles-prod img{
   float: right;
@@ -38,7 +40,8 @@ html {
 }
 
 body {
-  margin: 0
+  margin: 0;
+  background-image: url("../img/header-bg.jpg");
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {

@@ -33,6 +33,8 @@ footer,header,hgroup,menu,nav,section{
 }
 body{
     line-height:1;
+    background-image: url("../img/header-bg.jpg");
+    background-repeat: no-repeat;
 }
 ol,ul{
     list-style:none;
